@@ -1,2 +1,25 @@
-<h1>Ticket#index</h1>
-<p>Find me in app/views/ticket/index.html.erb</p>
+<div class='appWrapper'>
+    <div class='earnings'><%= @ticket.sum %></div>
+    <div class='ticketsWrapper'>
+        <div class='ticket'>
+            <span class='price'>400Р</span>
+            <%= link_to '+', ticket_bought_path(@ticket, :price => 400), class:'ticketBought'%>
+            <%= link_to '-', ticket_mistake_path(@ticket, :price => 400), class:'ticketMistake'%>
+        </div>
+        <div class='ticket'>
+            <span class='price'>500Р</span>
+            <%= link_to '+', ticket_bought_path(@ticket, :price => 500), class:'ticketBought'%>
+            <%= link_to '-', ticket_mistake_path(@ticket, :price => 500), class:'ticketMistake'%>
+        </div>
+        <div class='ticket'>
+            <span class='price'>550Р</span>
+            <%= link_to '+', ticket_bought_path(@ticket, :price => 550), class:'ticketBought'%>
+            <%= link_to '-', ticket_mistake_path(@ticket, :price => 550), class:'ticketMistake'%>
+        </div>
+        <div class='ticket'>
+            <span class='price'>650Р</span>
+            <%= link_to '+', ticket_bought_path(@ticket, :price => 650), class:'ticketBought'%>
+            <%= link_to '-', ticket_mistake_path(@ticket, :price =>650), class:'ticketMistake'%>
+        </div>
+    </div>
+<div>

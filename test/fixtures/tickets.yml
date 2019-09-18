@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  normal: 1
+  shared: 1
+  normalDrink: 1
+  sharedDrink: 1
+
+two:
+  normal: 1
+  shared: 1
+  normalDrink: 1
+  sharedDrink: 1

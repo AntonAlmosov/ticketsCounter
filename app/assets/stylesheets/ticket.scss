@@ -6,6 +6,8 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap')
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,7 +55,7 @@ table {
 
 @media (min-width: 481px){
     .appWrapper{
-        font-family: sans-serif;
+        font-family: 'Roboto';
         .earnings{
             padding-top: 50px;
             font-size: 50px;
@@ -112,7 +114,7 @@ table {
 
 @media (max-width: 480px){
     .appWrapper{
-        font-family: sans-serif;
+        font-family: 'Roboto';
         .earnings{
             padding-top: 20px;
             font-size: 50px;

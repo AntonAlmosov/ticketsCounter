@@ -1,5 +1,5 @@
 <div class='appWrapper'>
-    <div class='earnings'><%= @ticket.sum %> ₽</div>
+    <div class='earnings'><%= @ticket.sum %>₽ (<%= @ticket.share + @ticket.normal + @ticket.shareDrinks + @ticket.normalDrinks %>)</div>
     <div class='ticketsWrapper'>
         <div class='ticket'>
             <span class='price'>400₽ (<%= @ticket.share%>)</span>

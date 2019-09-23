@@ -17,6 +17,10 @@ ActiveRecord::Schema.define(version: 2019_09_18_211938) do
 
   create_table "tickets", force: :cascade do |t|
     t.integer "sum"
+    t.integer "normal"
+    t.integer "share"
+    t.integer "normalDrink"
+    t.integer "shareDrink"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -51,58 +51,120 @@ table {
 }
 
 
-.appWrapper{
-    font-family: sans-serif;
-    .earnings{
-        padding-top: 50px;
-        font-size: 50px;
-        font-weight: 700;
-        text-align: center;
-    }
-    .ticketsWrapper{
-        display: flex;
-        flex-flow: wrap;
-        justify-content: space-between;
-        box-sizing: border-box;
-        padding: 0 20px 0 20px;
-        .ticket{
-            margin: 0 auto;
-            min-width: 270px;
-            margin-top: 50px;
+@media (min-width: 481px){
+    .appWrapper{
+        font-family: sans-serif;
+        .earnings{
+            padding-top: 50px;
+            font-size: 50px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .ticketsWrapper{
             display: flex;
-            flex-flow: column;
-            padding: 10px;
+            flex-flow: wrap;
+            justify-content: space-between;
             box-sizing: border-box;
-            border: 1px rgba(0,0,0,0.2) solid;
-            border-radius: 5px;
-            .price{
-                font-size: 30px;
-                text-align: center;
-                margin-top: 20px;
-            }
-            .ticketBought{
+            padding: 0 20px 0 20px;
+            .ticket{
+                margin: 0 auto;
+                min-width: 270px;
+                margin-top: 50px;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                margin-top: 20px;
-                height: 100px;
-                text-decoration: none;
-                color: white;
-                background-color: black;
-                font-size: 30px;
+                flex-flow: column;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px rgba(0,0,0,0.2) solid;
+                border-radius: 5px;
+                .price{
+                    font-size: 30px;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                .ticketBought{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 20px;
+                    height: 100px;
+                    text-decoration: none;
+                    color: white;
+                    background-color: black;
+                    font-size: 30px;
+                }
+                .ticketMistake{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 10px;
+                    height: 40px;
+                    text-decoration: none;
+                    color: black;
+                    border: 2px solid black;
+                    font-size: 30px;
+                }
             }
-            .ticketMistake{
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .appWrapper{
+        font-family: sans-serif;
+        .earnings{
+            padding-top: 20px;
+            font-size: 50px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .ticketsWrapper{
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-between;
+            box-sizing: border-box;
+            width: 100vw;
+            padding: 0 3% 0 3%;
+            .ticket{
+                margin: 0 auto;
+                width: 45%;
+                margin-top: 20px;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                margin-top: 10px;
-                height: 40px;
-                text-decoration: none;
-                color: black;
-                border: 2px solid black;
-                font-size: 30px;
+                flex-flow: column;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px rgba(0,0,0,0.2) solid;
+                border-radius: 5px;
+                .price{
+                    font-size: 30px;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                .ticketBought{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 20px;
+                    height: 100px;
+                    text-decoration: none;
+                    color: white;
+                    background-color: black;
+                    font-size: 30px;
+                }
+                .ticketMistake{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 10px;
+                    height: 40px;
+                    text-decoration: none;
+                    color: black;
+                    border: 2px solid black;
+                    font-size: 30px;
+                }
             }
         }
     }

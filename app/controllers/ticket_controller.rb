@@ -34,11 +34,11 @@ class TicketController < ApplicationController
     elsif @price == 650
       @ticket.normalDrink = @ticket.normalDrink + 1
     elsif @price == 250
-      @ticket.normalDrink = @ticket.discount + 1
+      @ticket.discount = @ticket.discount + 1
     elsif @price == 150
-      @ticket.normalDrink = @ticket.upgrade + 1
+      @ticket.upgrade = @ticket.upgrade + 1
     elsif @price == 0
-      @ticket.normalDrink = @ticket.free + 1
+      @ticket.free = @ticket.free + 1
 
     end
 
@@ -59,13 +59,13 @@ class TicketController < ApplicationController
     elsif @price == 550
       @ticket.shareDrink = @ticket.shareDrink - 1
     elsif @price == 650
-      @ticket.normalDrink = @ticket.normalDrink - 1
+      @ticket.normalDrink = @ticket.normalDrink - 2
     elsif @price == 250
-      @ticket.normalDrink = @ticket.discount - 1
+      @ticket.discount = @ticket.discount - 2
     elsif @price == 150
-      @ticket.normalDrink = @ticket.upgrade - 1
+      @ticket.upgrade = @ticket.upgrade - 2
     elsif @price == 0
-      @ticket.normalDrink = @ticket.free - 1
+      @ticket.free = @ticket.free - 2
 
     end 
 

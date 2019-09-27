@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(version: 2019_09_18_211938) do
     t.integer "share"
     t.integer "normalDrink"
     t.integer "shareDrink"
+    t.integer "discount"
+    t.integer "upgrade"
+    t.integer "free"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

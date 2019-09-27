@@ -39,6 +39,7 @@ class TicketController < ApplicationController
       @ticket.normalDrink = @ticket.upgrade + 1
     elsif @price == 0
       @ticket.normalDrink = @ticket.free + 1
+
     end
 
     if @ticket.save
@@ -65,6 +66,7 @@ class TicketController < ApplicationController
       @ticket.normalDrink = @ticket.upgrade - 1
     elsif @price == 0
       @ticket.normalDrink = @ticket.free - 1
+
     end 
 
     @ticket.sum = @ticket.sum - @price

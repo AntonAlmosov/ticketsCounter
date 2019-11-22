@@ -24,6 +24,8 @@ class TicketController < ApplicationController
       @ticket.share = @ticket.share + 1
     elsif @price == 500
       @ticket.normal = @ticket.normal + 1
+    elsif @price == 300
+      @ticket.normal = @ticket.discount + 1
     end
 
     if @ticket.save
@@ -40,6 +42,8 @@ class TicketController < ApplicationController
       @ticket.share = @ticket.share - 1
     elsif @price == 500
       @ticket.normal = @ticket.normal - 1
+    elsif @price == 300
+      @ticket.normal = @ticket.discount - 1
     end 
 
     @ticket.sum = @ticket.sum - @price

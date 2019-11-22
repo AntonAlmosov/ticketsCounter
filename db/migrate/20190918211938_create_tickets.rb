@@ -4,6 +4,7 @@ class CreateTickets < ActiveRecord::Migration[5.2]
       t.integer :sum
       t.integer :normal
       t.integer :share
+      t.integer :discount
       
       t.timestamps
     end

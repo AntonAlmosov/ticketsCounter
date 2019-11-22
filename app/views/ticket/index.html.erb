@@ -10,6 +10,10 @@
             <span class='price'>500₽ (<%= @ticket.normal%>)</span>
             <%= link_to '+', ticket_bought_path(@ticket, :price => 500), class:'ticketBought'%>
             <%= link_to '-', ticket_mistake_path(@ticket, :price => 500), class:'ticketMistake'%>
+        </div><div class='ticket'>
+            <span class='price'>300₽ (<%= @ticket.normal%>)</span>
+            <%= link_to '+', ticket_bought_path(@ticket, :price => 300), class:'ticketBought'%>
+            <%= link_to '-', ticket_mistake_path(@ticket, :price => 300), class:'ticketMistake'%>
         </div>
     </div>
 <div>

@@ -7,6 +7,7 @@ class TicketController < ApplicationController
       @ticket.sum = 0
       @ticket.share = 0
       @ticket.normal = 0
+      @ticket.discount = 0
 
       if @ticket.save
         redirect_to root_path
@@ -25,7 +26,7 @@ class TicketController < ApplicationController
     elsif @price == 500
       @ticket.normal = @ticket.normal + 1
     elsif @price == 300
-      @ticket.normal = @ticket.discount + 1
+      @ticket.discount = @ticket.discount + 1
     end
 
     if @ticket.save
@@ -43,7 +44,7 @@ class TicketController < ApplicationController
     elsif @price == 500
       @ticket.normal = @ticket.normal - 1
     elsif @price == 300
-      @ticket.normal = @ticket.discount - 1
+      @ticket.discount = @ticket.discount - 1
     end 
 
     @ticket.sum = @ticket.sum - @price

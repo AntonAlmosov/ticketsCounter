@@ -7,11 +7,6 @@ class TicketController < ApplicationController
       @ticket.sum = 0
       @ticket.share = 0
       @ticket.normal = 0
-      @ticket.shareDrink = 0
-      @ticket.normalDrink = 0
-      @ticket.discount = 0
-      @ticket.upgrade = 0
-      @ticket.free = 0
 
       if @ticket.save
         redirect_to root_path
@@ -29,17 +24,6 @@ class TicketController < ApplicationController
       @ticket.share = @ticket.share + 1
     elsif @price == 500
       @ticket.normal = @ticket.normal + 1
-    elsif @price == 550
-      @ticket.shareDrink = @ticket.shareDrink + 1
-    elsif @price == 650
-      @ticket.normalDrink = @ticket.normalDrink + 1
-    elsif @price == 250
-      @ticket.discount = @ticket.discount + 1
-    elsif @price == 150
-      @ticket.upgrade = @ticket.upgrade + 1
-    elsif @price == 0
-      @ticket.free = @ticket.free + 1
-
     end
 
     if @ticket.save
@@ -56,17 +40,6 @@ class TicketController < ApplicationController
       @ticket.share = @ticket.share - 1
     elsif @price == 500
       @ticket.normal = @ticket.normal - 1
-    elsif @price == 550
-      @ticket.shareDrink = @ticket.shareDrink - 1
-    elsif @price == 650
-      @ticket.normalDrink = @ticket.normalDrink - 1
-    elsif @price == 250
-      @ticket.discount = @ticket.discount - 1
-    elsif @price == 150
-      @ticket.upgrade = @ticket.upgrade - 1
-    elsif @price == 0
-      @ticket.free = @ticket.free - 1
-
     end 
 
     @ticket.sum = @ticket.sum - @price

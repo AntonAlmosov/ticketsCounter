@@ -1,5 +1,5 @@
 <div class='appWrapper'>
-    <div class='earnings'><%= @ticket.sum %>₽ (<%= @ticket.share + @ticket.normal + @ticket.shareDrink + @ticket.normalDrink + @ticket.discount + @ticket.upgrade + @ticket.free %>)</div>
+    <div class='earnings'><%= @ticket.sum %>₽ (<%= @ticket.share + @ticket.normal%>)</div>
     <div class='ticketsWrapper'>
         <div class='ticket'>
             <span class='price'>400₽ (<%= @ticket.share%>)</span>
@@ -10,26 +10,6 @@
             <span class='price'>500₽ (<%= @ticket.normal%>)</span>
             <%= link_to '+', ticket_bought_path(@ticket, :price => 500), class:'ticketBought'%>
             <%= link_to '-', ticket_mistake_path(@ticket, :price => 500), class:'ticketMistake'%>
-        </div>
-        <div class='ticket'>
-            <span class='price'>550₽ (<%= @ticket.shareDrink%>)</span>
-            <%= link_to '+', ticket_bought_path(@ticket, :price => 550), class:'ticketBought'%>
-            <%= link_to '-', ticket_mistake_path(@ticket, :price => 550), class:'ticketMistake'%>
-        </div>
-        <div class='ticket'>
-            <span class='price'>650₽ (<%= @ticket.normalDrink%>)</span>
-            <%= link_to '+', ticket_bought_path(@ticket, :price => 650), class:'ticketBought'%>
-            <%= link_to '-', ticket_mistake_path(@ticket, :price => 650), class:'ticketMistake'%>
-        </div>
-        <div class='ticket'>
-            <span class='price'>250₽ (<%= @ticket.discount%>)</span>
-            <%= link_to '+', ticket_bought_path(@ticket, :price => 250), class:'ticketBought'%>
-            <%= link_to '-', ticket_mistake_path(@ticket, :price => 250), class:'ticketMistake'%>
-        </div>
-        <div class='ticket'>
-            <span class='price'>0₽ (<%= @ticket.free%>)</span>
-            <%= link_to '+', ticket_bought_path(@ticket, :price => 0), class:'ticketBought'%>
-            <%= link_to '-', ticket_mistake_path(@ticket, :price => 0), class:'ticketMistake'%>
         </div>
     </div>
 <div>
